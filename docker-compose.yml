@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  jupyter-lab:
+    build:
+      context: .
+      target: development
+    volumes:
+      # Mount the repository directory
+      - .:/workspace
+      # Mount Jupyter settings and workspaces
+      - jupyter_data:/home/jupyter_user/.jupyter
+    environment:
+      - PYTHONPATH=/workspace/src
+      - ENVIRONMENT=development
+      - GIT_USER_NAME=Trevor Jordan
+      - GIT_USER_EMAIL=20461601+tsj7ww@users.noreply.github.com 
+      - REPO_URL=https://github.com/tsj7ww/halsey.git
+      - REPO_BRANCH=main
+    ports:
+      - "8888:8888"  # Jupyter Lab
+    # Keep container running
+    tty: true
+    stdin_open: true
+    # Override the default command if needed
+    # command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=''
+
+volumes:
+  jupyter_data: {}

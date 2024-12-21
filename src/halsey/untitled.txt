@@ -1,0 +1,77 @@
+auto_ml/
+│
+├── pyproject.toml
+├── setup.cfg
+├── README.md
+├── LICENSE
+├── CHANGELOG.md
+├── requirements.txt
+│
+├── src/
+│   └── auto_ml/
+│       ├── init.py
+│       ├── config/
+│       │   ├── init.py
+│       │   ├── data_config.py
+│       │   └── model_config.py
+│       │
+│       ├── preprocessing/
+│       │   ├── init.py
+│       │   ├── base.py
+│       │   ├── categorical.py
+│       │   ├── numerical.py
+│       │   ├── text.py
+│       │   └── feature_selection.py
+│       │
+│       ├── models/
+│       │   ├── init.py
+│       │   ├── base.py
+│       │   ├── tree_models.py
+│       │   ├── linear_models.py
+│       │   ├── neural_nets.py
+│       │   └── ensembles.py
+│       │
+│       ├── optimization/
+│       │   ├── init.py
+│       │   ├── search_spaces.py
+│       │   ├── hyperopt.py
+│       │   └── model_selection.py
+│       │
+│       ├── evaluation/
+│       │   ├── init.py
+│       │   ├── metrics.py
+│       │   ├── cross_validation.py
+│       │   └── model_analysis.py
+│       │
+│       ├── utils/
+│       │   ├── init.py
+│       │   ├── logging.py
+│       │   ├── validation.py
+│       │   └── io.py
+│       │
+│       └── pipeline/
+│           ├── init.py
+│           ├── auto_ml.py
+│           └── ensemble_pipeline.py
+│
+├── tests/
+│   ├── init.py
+│   ├── conftest.py
+│   ├── test_preprocessing/
+│   ├── test_models/
+│   ├── test_optimization/
+│   ├── test_evaluation/
+│   └── test_pipeline/
+│
+├── examples/
+│   ├── basic_usage.ipynb
+│   ├── advanced_pipeline.ipynb
+│   └── custom_models.ipynb
+│
+└── docs/
+    ├── conf.py
+    ├── index.rst
+    ├── api/
+    ├── user_guide/
+    ├── examples/
+    └── _static/
