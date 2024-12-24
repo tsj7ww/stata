@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  jupyter-lab:
+  dev:
     build:
       context: .
       target: development
@@ -15,7 +15,7 @@ services:
       - ENVIRONMENT=development
       - GIT_USER_NAME=Trevor Jordan
       - GIT_USER_EMAIL=20461601+tsj7ww@users.noreply.github.com 
-      - REPO_URL=https://github.com/tsj7ww/halsey.git
+      - REPO_URL=https://github.com/tsj7ww/stata.git
       - REPO_BRANCH=main
     ports:
       - "8888:8888"  # Jupyter Lab
@@ -27,3 +27,4 @@ services:
 
 volumes:
   jupyter_data: {}
+  data: 
